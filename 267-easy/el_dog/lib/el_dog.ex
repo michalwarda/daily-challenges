@@ -22,6 +22,6 @@ defmodule ElDog do
   end
 
   def he_didnt_get(place, range \\ 100) do
-    range |> Enum.join(', ') |> IO.puts
+    create_list(place, range) |> Enum.join(", ") |> IO.puts
   end
 end

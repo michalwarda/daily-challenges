@@ -24,7 +24,5 @@ defmodule ElDogTest do
   test "create_list lists all places dog didn't get with range" do
     assert ElDog.create_list(1, 5) == 1..5 |> Enum.map(&(ElDog.to_spoken(&1))) |> List.delete(ElDog.to_spoken(1))
     assert ElDog.create_list(2, 5) == 1..5 |> Enum.map(&(ElDog.to_spoken(&1))) |> List.delete(ElDog.to_spoken(2))
-    ElDog.he_didnt_get(1)
-    ElDog.he_didnt_get(2)
   end
 end

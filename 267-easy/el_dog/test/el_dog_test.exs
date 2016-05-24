@@ -14,6 +14,8 @@ defmodule ElDogTest do
     assert ElDog.to_spoken(12) == "12th"
     assert ElDog.to_spoken(13) == "13th"
     assert ElDog.to_spoken(14) == "14th"
+    assert ElDog.to_spoken(111) == "111th"
+    assert ElDog.to_spoken(1111) == "1111th"
   end
 
   test "create_list lists all places dog didn't get" do

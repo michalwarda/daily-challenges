@@ -1,15 +1,18 @@
 defmodule ElDog do
+  def to_spoken(number) when number in [11, 12, 13] do
+    "#{number}th"
+  end
+
   def to_spoken(number) do
-    case number do
-      number when number in [11, 12, 13] -> '#{number}th'
-      number ->
-        case rem(number, 10) do
-          1 -> '#{number}st'
-          2 -> '#{number}nd'
-          3 -> '#{number}rd'
-          _ -> '#{number}th'
-        end
-    end
+    ending =
+      case rem(number, 10) do
+        1 -> "st"
+        2 -> "nd"
+        3 -> "rd"
+        _ -> "th"
+      end
+
+    "#{number}#{ending}"
   end
 
   def create_list(place, range \\ 100) do
@@ -19,7 +22,7 @@ defmodule ElDog do
   end
 
   def he_didnt_get(place, range \\ 100) do
-    create_list(place, range)
-    |> Enum.each(&(IO.puts(&1)))
+    [head | tail] = create_list(place, range)
+    tail |> Enum.reduce(head, &(&2 <> ", " <> &1)) |> IO.puts
   end
 end

@@ -1,7 +1,5 @@
 defmodule ElDog do
-  def to_spoken(number) when rem(number, 100) in [11, 12, 13] do
-    "#{number}th"
-  end
+  def to_spoken(number) when rem(number, 100) in [11, 12, 13] do: "#{number}th"
 
   def to_spoken(number) do
     ending =

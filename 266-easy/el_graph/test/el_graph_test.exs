@@ -1,5 +1,5 @@
 defmodule ElGraphTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest ElGraph
 
   test "parse returns a map with numbers as groups" do

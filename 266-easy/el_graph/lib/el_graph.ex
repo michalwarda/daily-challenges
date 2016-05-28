@@ -15,7 +15,7 @@ defmodule ElGraph do
 
   def connection_count(connections, node1, node2) do
     [node1, node2] = [node1, node2] |> Enum.sort
-    connections[node1] |> Enum.filter(&(&1 == node2)) |> Enum.count
+    connections[node1] |> Enum.count(&(&1 == node2))
   end
 
   def node_count(connections) do

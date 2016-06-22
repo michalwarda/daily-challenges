@@ -1,0 +1,14 @@
+{
+  "name": "js_dog",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "mw",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^2.5.3"
+  }
+}

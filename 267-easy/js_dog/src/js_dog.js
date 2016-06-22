@@ -5,7 +5,7 @@ function toSpoken(number) {
 
 function createList(place, length = 100) {
   return Array
-    .from({length: length + 2}, (_, number) => number)
+    .from({length: length + 1}, (_, number) => number + 1)
     .filter(number => number !== place)
     .map(number => toSpoken(number))
 }

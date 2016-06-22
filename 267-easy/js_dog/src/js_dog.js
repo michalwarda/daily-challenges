@@ -4,10 +4,10 @@ function toSpoken(number) {
 }
 
 function convertNumber(number) {
-  if([11, 12, 13].includes(number)) {
+  if([11, 12, 13].includes(number % 100)) {
     return 'th';
   } else {
-    return {1: 'st', 2: 'nd', 3: 'rd'}[number % 10] || 'th'
+    return {1: 'st', 2: 'nd', 3: 'rd'}[number % 10] || 'th';
   }
 }
 

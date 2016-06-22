@@ -11,6 +11,9 @@ describe('toSpoken', () => {
     assert.equal(toSpoken(11), "11th");
     assert.equal(toSpoken(12), "12th");
     assert.equal(toSpoken(13), "13th");
+    assert.equal(toSpoken(111), "111th");
+    assert.equal(toSpoken(112), "112th");
+    assert.equal(toSpoken(113), "113th");
   });
 });
 

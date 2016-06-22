@@ -18,7 +18,12 @@ function createList(place, length = 100) {
     .map(number => toSpoken(number))
 }
 
+function didntGet(place, length = 100) {
+  return createList(place, length).join(', ');
+}
+
 module.exports = {
   toSpoken,
   createList,
+  didntGet,
 }

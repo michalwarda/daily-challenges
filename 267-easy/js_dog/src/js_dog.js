@@ -1,5 +1,6 @@
 function toSpoken(number) {
-  return `0th`;
+  const ending = number === 0 ? "th" : "st";
+  return `${number}${ending}`;
 }
 
 module.exports = {

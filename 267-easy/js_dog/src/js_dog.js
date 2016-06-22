@@ -1,15 +1,6 @@
 function toSpoken(number) {
-  const ending = findEnding(number);
+  const ending = {1: 'st', 2: 'nd', 3: 'rd'}[number % 10] || 'th';
   return `${number}${ending}`;
-}
-
-function findEnding(number) {
-  switch(number) {
-    case 1: return "st"
-    case 2: return "nd"
-    case 3: return "rd"
-    default: return "th"
-  };
 }
 
 module.exports = {

@@ -8,5 +8,6 @@ describe('toSpoken', () => {
     assert.equal(toSpoken(2), "2nd");
     assert.equal(toSpoken(3), "3rd");
     assert.equal(toSpoken(4), "4th");
+    assert.equal(toSpoken(11), "11st");
   });
 });

@@ -3,9 +3,9 @@ function toSpoken(number) {
   return `${number}${ending}`;
 }
 
-function createList(place) {
+function createList(place, length = 100) {
   return Array
-    .from({length: 102}, (_, number) => number)
+    .from({length: length + 2}, (_, number) => number)
     .filter(number => number !== place)
     .map(number => toSpoken(number))
 }
